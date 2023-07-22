@@ -14,7 +14,7 @@ const Login = () => {
     };
     
     return (
-        <div>
+        <div className="Login_back">
             <MyHeader headText={"Login"}/>
 
             <div class="Login">

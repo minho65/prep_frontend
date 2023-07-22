@@ -92,16 +92,20 @@ header .head_btn_right {
   width: 25%;
 }
 
+.Login_back {
+  height: 100vh;
+}
+
 /* LOGIN */
 .Login {
   padding-top: 20px;
   padding-bottom: 20px;
 
-  display: block;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 
   text-align: center;
-  
 }
 
 .Login > input {
@@ -117,7 +121,8 @@ header .head_btn_right {
 }
 
 .Login > label  {
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   margin: 25px auto 0;
   padding-bottom: 20px;
@@ -134,7 +139,6 @@ header .head_btn_right {
   border: none;
   outline: none;
   margin-top: 5px;
-  margin-left: 20px;
   padding-bottom: 5px;
   font-size: 16px;
   border-bottom: 1px solid #e2e2e2;
