@@ -1,8 +1,13 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+// COMPONENTS
+import MyButton from "../Components/MyButton";
+import MyHeader from "../Components/MyHeader";
 
 const Login = () => {
     const [userId, setUserId] = useState("");
+    const navigate = useNavigate();
 
     const onChange = (e) => {
         setUserId(e.target.value);
@@ -10,12 +15,18 @@ const Login = () => {
     
     return (
         <div>
-            <input onChange={onChange} value={userId} />
-            <div>
-                <Link to={`/home/${userId}`} > 
-                    <button> 로그인 </button>
-                </Link>
-            </div> 
+            <MyHeader headText={"Login"}/>
+
+            <div class="Login">
+                <h2>Welcome back,</h2>
+                <label>
+                    <span>USERID</span>
+                    <input type="userId" onChange={onChange} value={userId} />
+                </label>
+
+                <MyButton text={"Login"} onClick={()=>navigate('/home/'+userId)} type="Login"/>
+            </div>
+            
         </div>
     );
 }

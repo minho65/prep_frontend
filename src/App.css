@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Yeon+Sung&display=swap');
+
 body {
   background-color: #f6f6f6;
   display: flex;
@@ -6,10 +8,6 @@ body {
   min-height: 100vh;
   margin: 0px;
 }
-
-/* .App {
-  padding: 20px;
-} */
 
 @media (min-width : 650px) {
   .App {
@@ -32,4 +30,117 @@ body {
   min-height: 100vh;
   padding-left: 20px;
   padding-right: 20px;
+
+  font-family: 'Nanum Pen Script', cursive;
+  font-family: 'Yeon Sung', cursive;
+}
+
+/* MyButton */
+
+.MyButton {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  font-size: 18px;
+
+  white-space: nowrap;
+
+  font-family: 'Nanum Pen Script', cursive;
+}
+
+.MyButton_default{
+  background-color: #ececec;
+  color: black;
+}
+
+.MyButton_Login{
+  background-color: #64c964;
+  color: white;
+}
+
+/* HEADER */
+header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+header > div {
+  display: flex;
+}
+
+header .head_text {
+  width: 50%;
+  font-size: 25px;
+  justify-content: center;
+}
+
+header .head_btn_left {
+  width: 25%;
+}
+
+header .head_btn_right {
+  width: 25%;
+}
+
+/* LOGIN */
+.Login {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  display: block;
+  align-items: center;
+
+  text-align: center;
+  
+}
+
+.Login > input {
+  border: none;
+  outline: none;
+  background: none;
+
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  padding-bottom: 5px;
+  font-size: 16px;
+}
+
+.Login > label  {
+  display: block;
+  text-align: center;
+  margin: 25px auto 0;
+  padding-bottom: 20px;
+
+  span {
+    font-size: 12px;
+    color: #cfcfcf;
+    text-transform: uppercase;
+  };
+}
+
+.Login > label > input {
+  background: none;
+  border: none;
+  outline: none;
+  margin-top: 5px;
+  margin-left: 20px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  border-bottom: 1px solid #e2e2e2;
+  /* text-align: center; */
+}
+
+.Login > button {
+  /* display: block; */
 }
