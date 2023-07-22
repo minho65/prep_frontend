@@ -141,6 +141,11 @@ header .head_btn_right {
   /* text-align: center; */
 }
 
-.Login > button {
-  /* display: block; */
+/* NOT FOUND */
+.NotFound {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64px; 
 }
