@@ -12,7 +12,7 @@ const Login = () => {
     const onChange = (e) => {
         setUserId(e.target.value);
     };
-    
+
     return (
         <div className="Login_back">
             <MyHeader headText={"Login"}/>
@@ -25,6 +25,7 @@ const Login = () => {
                 </label>
 
                 <MyButton text={"Login"} onClick={()=>navigate('/home/'+userId)} type="Login"/>
+                {/* <MyButton text={"Login"} onClick={()=>onclick({userId,navigate})} type="Login"/> */}
             </div>
             
         </div>

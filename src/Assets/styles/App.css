@@ -108,30 +108,19 @@ header .head_btn_right {
   text-align: center;
 }
 
-.Login > input {
-  border: none;
-  outline: none;
-  background: none;
-
-  display: block;
-  width: 100%;
-  margin-top: 5px;
-  padding-bottom: 5px;
-  font-size: 16px;
-}
-
 .Login > label  {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: 25px auto 0;
-  padding-bottom: 20px;
+  /* margin: 25px auto 0; */
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
 
-  span {
-    font-size: 12px;
-    color: #cfcfcf;
-    text-transform: uppercase;
-  };
+.Login > label > span {
+  font-size: 16px;
+  color: #cecece;
+  text-transform: uppercase;
 }
 
 .Login > label > input {
@@ -142,7 +131,7 @@ header .head_btn_right {
   padding-bottom: 5px;
   font-size: 16px;
   border-bottom: 1px solid #e2e2e2;
-  /* text-align: center; */
+  text-align: center;
 }
 
 /* NOT FOUND */
