@@ -215,3 +215,8 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/node,react,windows,macos
+build/index.html
+build/asset-manifest.json
+build/static/js/main.afe29c2d.js
+build/static/js/main.afe29c2d.js.LICENSE.txt
+build/static/js/main.afe29c2d.js.map
