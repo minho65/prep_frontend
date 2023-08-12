@@ -155,3 +155,37 @@ header .head_btn_right {
   width: 50%;
   text-align: center;
 }
+
+/* Restaurant */
+.RestaurantList {
+  margin-top: 20px;
+}
+
+.RestaurantListWrapper {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border: solid #e2e2e2;
+  border-radius: 10px;
+}
+
+.RestaurantName {
+  margin: 5px;
+  width: 20%;
+  text-align: center;
+}
+
+.RestaurantCategory {
+  margin: 5px;
+  width: 20%;
+  text-align: center;
+}
+
+.RestaurantAddress {
+  margin: 5px;
+  width: 60%;
+  font-size: small;
+  text-align: center;
+}

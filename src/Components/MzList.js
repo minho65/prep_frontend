@@ -1,10 +1,16 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function EachList ({state}) {
-    const {listName, createdDate} = state;
+    const navigate = useNavigate();
+    const {listId, listName, createdDate} = state;
+
+    const onClick = ({eachList}) => {
+        navigate('/restaurants', {state : {listId: listId, listName: listName}})
+    }
 
     return (
-        <div className="EachListWrapper">
+        <div className="EachListWrapper" onClick={onClick}>
             <div className="EachList">
                 {listName}
             </div>
