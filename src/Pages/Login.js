@@ -25,7 +25,7 @@ const Login = () => {
                 return res.json();
             }).then((res) => {
                 if(res.userId === userId){
-                    navigate('/home/'+userId);
+                    navigate("/home", {state : {userId: res.userId, userName: res.userName}});
                 }else{
                     alert("wrong userId : " + userId);
                 }

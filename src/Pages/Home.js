@@ -1,18 +1,16 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import MyHeader from "../Components/MyHeader";
 import MzList from '../Components/MzList'
+import LeftHeader from "../Components/LeftHeader";
 
 const Home = () => {
-    const params = useParams();
-    const userId = params.userId;
+    const {state} = useLocation();
+    const {userId, userName} = state;
 
     return (
         <div>
-          <MyHeader headText={"Home"}></MyHeader>
-          <h1>{userId} 의 홈</h1>
-          <h1>홈</h1>
-          <p>이곳은 홈이에요. 가장 먼저 보여지는 페이지죠.</p>
+          <MyHeader headText={"맛집리스트"} rightChild={<LeftHeader text={userId}/>}></MyHeader>
           <MzList userId={userId} />
         </div>
     );

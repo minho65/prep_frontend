@@ -75,17 +75,19 @@ header .head_text {
 
 header .head_btn_left {
   width: 25%;
+  justify-content: center;
 }
 
 header .head_btn_right {
   width: 25%;
+  justify-content: center;
 }
 
+/* LOGIN */
 .Login_back {
   height: 100vh;
 }
 
-/* LOGIN */
 .Login {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -130,4 +132,26 @@ header .head_btn_right {
   align-items: center;
   justify-content: center;
   font-size: 64px; 
+}
+
+/* MzList */
+.MzList {
+  margin-top: 20px;
+}
+
+.EachListWrapper {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border: solid #e2e2e2;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.EachList {
+  margin: 5px;
+  width: 50%;
+  text-align: center;
 }

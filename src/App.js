@@ -10,7 +10,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="/home/:userId" exact={true} element={<Home />} />
+          <Route path="/home" exact={true} element={<Home />} />
           <Route path="/main" element={<Main />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
