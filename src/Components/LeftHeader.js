@@ -1,4 +1,7 @@
+
 const LeftHeader = ({text}) => {
+    
+
     return (<div className="LeftHeader">
         {text}
     </div>)
