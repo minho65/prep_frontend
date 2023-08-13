@@ -4,6 +4,7 @@ import Home from './Pages/Home.js'
 import Main from './Pages/Main.js'
 import NotFound from './Pages/NotFound.js';
 import Restaurant from './Pages/Restaurant.js';
+import CreateMzList from './Pages/CreateMzList.js';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/home" exact={true} element={<Home />} />
           <Route path="/main" element={<Main />} />
           <Route path='/restaurants' element={<Restaurant/>} />
+          <Route path='/CreateMzList' element={<CreateMzList/>}/>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

@@ -212,7 +212,7 @@ header .head_btn_right {
   align-items: center;
 }
 
-.CreateMzListButton {
+.MyButton_CreateMzList {
   background-color: #64c964;
   color: white;
   font-weight: bolder;
@@ -224,4 +224,55 @@ header .head_btn_right {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  cursor: pointer;
+}
+
+.CreateMzListBody {
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+}
+
+.CreateMzListInput {
+  flex: 1;
+  text-align: center;
+  margin-top: 25%;
+}
+
+
+.CreateMzListInput > label  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 15%;
+  padding-bottom: 15%;
+}
+
+.CreateMzListInput > label > input {
+  background: none;
+  border: none;
+  outline: none;
+  /* padding-top: 15%; */
+  font-size: 16px;
+  border-bottom: 1px solid #e2e2e2;
+  text-align: center;
+  width: 50%;
+}
+
+.CreateNewMzListWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* Restaurant */
+.Restaurant {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.RestaurantList {
+  flex: 1;
 }

@@ -6,6 +6,7 @@ import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 import RestaurantList from "../Components/RestaurantList";
+import MyButton from "../Components/MyButton";
 
 function Restaurant() {
     const {state} = useLocation();
@@ -30,14 +31,20 @@ function Restaurant() {
     },[listId])
 
     return (
-        <div>
+        <div className="Restaurant">
             <MyHeader 
                 headText={"RESTAURANT"} 
                 rightChild={<RightHeader text={listName}/>} 
                 leftChild={<LeftHeader />}
             />
 
-            <RestaurantList restaurants={restaurants}/>
+            <div className="RestaurantList">
+                <RestaurantList restaurants={restaurants}/>
+            </div>
+
+            <div className="CreateMzListWrapper">
+                <MyButton text={"+"} type="CreateMzList"/>
+            </div>
         </div>
     )
 }
