@@ -4,19 +4,27 @@ import MyHeader from "../Components/MyHeader";
 import MzList from '../Components/MzList'
 import LeftHeader from "../Components/LeftHeader";
 import RightHeader from "../Components/RightHeader";
+import CreateMzList from "./CreateMzList";
 
 const Home = () => {
     const {state} = useLocation();
-    const {userId, userName} = state;
+    const {userId} = state;
 
     return (
-        <div>
+        <div className="Home">
           <MyHeader 
-            headText={"맛집리스트"} 
-            rightChild={<LeftHeader text={userId}/>} 
-            leftChild={<RightHeader />}
+            headText={"MATZIP"} 
+            rightChild={<RightHeader text={userId}/>} 
+            leftChild={<LeftHeader />}
           />
+
           <MzList userId={userId} />
+
+          <div className="CreateMzListWrapper">
+            <div className="CreateMzListButton">
+              +
+            </div>
+          </div>
         </div>
     );
 }

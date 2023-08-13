@@ -32,9 +32,9 @@ function Restaurant() {
     return (
         <div>
             <MyHeader 
-                headText={"MATZIP"} 
-                rightChild={<LeftHeader text={listName}/>} 
-                leftChild={<RightHeader />}
+                headText={"RESTAURANT"} 
+                rightChild={<RightHeader text={listName}/>} 
+                leftChild={<LeftHeader />}
             />
 
             <RestaurantList restaurants={restaurants}/>

@@ -22,6 +22,7 @@ body {
   
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 /* MyButton */
@@ -85,7 +86,6 @@ header .head_btn_right {
 
 /* LOGIN */
 .Login_back {
-  /* height: 100vh; */
   position: absolute; top:0; left:0;
   width: 100%;
   height: 100%;
@@ -139,9 +139,18 @@ header .head_btn_right {
   font-size: 64px; 
 }
 
+/* Home */
+.Home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
 /* MzList */
 .MzList {
   margin-top: 20px;
+  height: 100%;
 }
 
 .EachListWrapper {
@@ -193,4 +202,26 @@ header .head_btn_right {
   width: 60%;
   font-size: small;
   text-align: center;
+}
+
+/* CreateMzList */
+.CreateMzListWrapper {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.CreateMzListButton {
+  background-color: #64c964;
+  color: white;
+  font-weight: bolder;
+  font-size: 5vh;
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

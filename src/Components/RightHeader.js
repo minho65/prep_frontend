@@ -1,13 +1,10 @@
-import { useNavigate } from "react-router-dom";
 
-function RightHeader() {
-    const navigate = useNavigate();
+const RightHeader = ({text}) => {
+    
 
-    return (
-        <div style={{cursor: 'pointer'}} onClick={() => navigate(-1)}>
-            back
-        </div>
-    )
+    return (<div className="RightHeader">
+        {text}
+    </div>)
 }
 
 export default RightHeader;

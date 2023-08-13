@@ -1,10 +1,13 @@
+import { useNavigate } from "react-router-dom";
 
-const LeftHeader = ({text}) => {
-    
+function LeftHeader() {
+    const navigate = useNavigate();
 
-    return (<div className="LeftHeader">
-        {text}
-    </div>)
+    return (
+        <div style={{cursor: 'pointer'}} onClick={() => navigate(-1)}>
+            back
+        </div>
+    )
 }
 
 export default LeftHeader;
