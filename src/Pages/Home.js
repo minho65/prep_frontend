@@ -1,19 +1,34 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import MyHeader from "../Components/MyHeader";
 import MzList from '../Components/MzList'
+import LeftHeader from "../Components/LeftHeader";
+import RightHeader from "../Components/RightHeader";
+import { useNavigate } from "react-router-dom";
+import MyButton from "../Components/MyButton";
 
 const Home = () => {
-    const params = useParams();
-    const userId = params.userId;
+    const {state} = useLocation();
+    const {userId} = state;
+    const navigate = useNavigate();
+
+    const onClick = () => {
+      navigate("/CreateMzList", {state : {userId: userId}});
+    }
 
     return (
-        <div>
-          <MyHeader headText={"Home"}></MyHeader>
-          <h1>{userId} 의 홈</h1>
-          <h1>홈</h1>
-          <p>이곳은 홈이에요. 가장 먼저 보여지는 페이지죠.</p>
+        <div className="Home">
+          <MyHeader 
+            headText={"MATZIP"} 
+            rightChild={<RightHeader text={userId}/>} 
+            leftChild={<LeftHeader />}
+          />
+
           <MzList userId={userId} />
+
+          <div className="CreateMzListWrapper">
+            <MyButton text={"+"} onClick={onClick} type="CreateMzList"/>
+          </div>
         </div>
     );
 }

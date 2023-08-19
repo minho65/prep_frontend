@@ -2,37 +2,27 @@
 
 body {
   background-color: #f6f6f6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0px;
-}
-
-@media (min-width : 650px) {
-  .App {
-    width : 650px;
-  };
-}
-
-@media (max-width : 950px) {
-  .App {
-    width : 90vw;
-  };
 }
 
 #root {
   background-color: white;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 15px;
+  width: 40vh;
+  height: 60vh;
+  margin: 0 auto; /* 추후 박스 하단에 추가 버튼을 위치시키기 위한 설정 */
+  margin-top: 15vh;
+  margin-bottom: 15vh; 
+  position: relative; /* 추후 박스 하단에 추가 버튼을 위치시키기 위한 설정 */
 }
 
 .App {
-  min-height: 100vh;
-  padding-left: 20px;
-  padding-right: 20px;
-
   font-family: 'Nanum Pen Script', cursive;
   font-family: 'Yeon Sung', cursive;
+  
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 /* MyButton */
@@ -86,19 +76,23 @@ header .head_text {
 
 header .head_btn_left {
   width: 25%;
+  justify-content: center;
 }
 
 header .head_btn_right {
   width: 25%;
-}
-
-.Login_back {
-  height: 100vh;
+  justify-content: center;
 }
 
 /* LOGIN */
+.Login_back {
+  position: absolute; top:0; left:0;
+  width: 100%;
+  height: 100%;
+}
+
 .Login {
-  padding-top: 20px;
+  padding-top: 20%;
   padding-bottom: 20px;
 
   display: flex;
@@ -106,6 +100,9 @@ header .head_btn_right {
   align-items: center;
 
   text-align: center;
+
+  width: 100%;
+  height: 100%;
 }
 
 .Login > label  {
@@ -113,8 +110,8 @@ header .head_btn_right {
   flex-direction: column;
   text-align: center;
   /* margin: 25px auto 0; */
-  padding-top: 30px;
-  padding-bottom: 40px;
+  padding-top: 15%;
+  padding-bottom: 15%;
 }
 
 .Login > label > span {
@@ -127,8 +124,7 @@ header .head_btn_right {
   background: none;
   border: none;
   outline: none;
-  margin-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 15%;
   font-size: 16px;
   border-bottom: 1px solid #e2e2e2;
   text-align: center;
@@ -141,4 +137,142 @@ header .head_btn_right {
   align-items: center;
   justify-content: center;
   font-size: 64px; 
+}
+
+/* Home */
+.Home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+/* MzList */
+.MzList {
+  margin-top: 20px;
+  height: 100%;
+}
+
+.EachListWrapper {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border: solid #e2e2e2;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.EachList {
+  margin: 5px;
+  width: 50%;
+  text-align: center;
+}
+
+/* Restaurant */
+.RestaurantList {
+  margin-top: 20px;
+}
+
+.RestaurantListWrapper {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border: solid #e2e2e2;
+  border-radius: 10px;
+}
+
+.RestaurantName {
+  margin: 5px;
+  width: 20%;
+  text-align: center;
+}
+
+.RestaurantCategory {
+  margin: 5px;
+  width: 20%;
+  text-align: center;
+}
+
+.RestaurantAddress {
+  margin: 5px;
+  width: 60%;
+  font-size: small;
+  text-align: center;
+}
+
+/* CreateMzList */
+.CreateMzListWrapper {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MyButton_CreateMzList {
+  background-color: #64c964;
+  color: white;
+  font-weight: bolder;
+  font-size: 5vh;
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.CreateMzListBody {
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+}
+
+.CreateMzListInput {
+  flex: 1;
+  text-align: center;
+  margin-top: 25%;
+}
+
+
+.CreateMzListInput > label  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 15%;
+  padding-bottom: 15%;
+}
+
+.CreateMzListInput > label > input {
+  background: none;
+  border: none;
+  outline: none;
+  /* padding-top: 15%; */
+  font-size: 16px;
+  border-bottom: 1px solid #e2e2e2;
+  text-align: center;
+  width: 50%;
+}
+
+.CreateNewMzListWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* Restaurant */
+.Restaurant {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.RestaurantList {
+  flex: 1;
 }
