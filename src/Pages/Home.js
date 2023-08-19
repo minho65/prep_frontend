@@ -13,20 +13,23 @@ const Home = () => {
     const navigate = useNavigate();
 
     const onClick = () => {
-      navigate("/CreateMzList", {state : {userId: userId}});
+      navigate("/createmzlist", {state : {userId: userId}});
     }
 
     return (
-        <div className="Home">
+        <div className="contents">
           <MyHeader 
             headText={"MATZIP"} 
             rightChild={<RightHeader text={userId}/>} 
             leftChild={<LeftHeader />}
           />
 
-          <MzList userId={userId} />
+          <div className="ListWrapper">
+            <MzList userId={userId} />
+          </div>
+          
 
-          <div className="CreateMzListWrapper">
+          <div className="Footer">
             <MyButton text={"+"} onClick={onClick} type="CreateMzList"/>
           </div>
         </div>

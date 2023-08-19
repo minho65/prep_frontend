@@ -140,15 +140,16 @@ header .head_btn_right {
 }
 
 /* Home */
-.Home {
+.contents {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
+  /* background-color: #64c964; */
 }
 
 /* MzList */
-.MzList {
+.ListWrapper {
   margin-top: 20px;
   height: 100%;
 }
@@ -171,10 +172,6 @@ header .head_btn_right {
 }
 
 /* Restaurant */
-.RestaurantList {
-  margin-top: 20px;
-}
-
 .RestaurantListWrapper {
   width: 95%;
   display: flex;
@@ -205,7 +202,7 @@ header .head_btn_right {
 }
 
 /* CreateMzList */
-.CreateMzListWrapper {
+.Footer {
   height: 20%;
   display: flex;
   justify-content: center;
@@ -275,4 +272,40 @@ header .head_btn_right {
 
 .RestaurantList {
   flex: 1;
+}
+
+/*YnList*/
+.YnListWrapper {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  /* border: solid #e2e2e2; */
+  /* border-radius: 10px; */
+}
+
+.YnList {
+  height: 3vh;
+  width: 3vh;
+  border-radius: 50%;
+  border: #64c964 solid;
+  cursor: pointer;
+}
+
+.YnList_Y {
+  background-color: #64c964;
+}
+
+.YnList_N {
+  background-color: white;
+}
+
+.YnListName {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: #cecece solid;
+  /* background-color: aqua; */
 }
