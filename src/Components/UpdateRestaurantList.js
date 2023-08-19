@@ -1,30 +1,17 @@
 import React from "react";
-import { useEffect, useState } from "react";
-import Restaurant from "../Pages/Restaurant";
 
-function UpdateRestaurantList({listId}) {
+function UpdateRestaurantList({restaurants, setRestaurants}) {
 
-    const [restaurants, setRestaurants] = useState([]);
+    function sortRestaurants(){
+        restaurants.sort((a, b) => {
+            const prev = a.enrolledYn === 'Y' ? 1 : 0;
+            const next = b.enrolledYn === 'Y' ? 1 : 0;
+            return (next - prev) === 0 ? b.restaurantId - a.restaurantId : next - prev;
+        })
+    }
 
-    useEffect(() => {
-        async function getUpdateList(){
-            const res = await fetch(`/mzlist/${listId}/enrolledyn`, {
-                headers: {
-                  Accept: "application/json",
-                },
-                method: "GET",
-            }).then((res) => {
-                return res.json();
-            });
+    sortRestaurants();
 
-            setRestaurants(Object.values(res.enrolledYnList));
-        }
-
-        getUpdateList();
-
-        console.log(restaurants);
-    }, [listId])
-    
     function YnList({state}){
 
         const {restaurantId, restaurantName, enrolledYn} = state;
@@ -37,9 +24,10 @@ function UpdateRestaurantList({listId}) {
                     restaurant => restaurant.restaurantId === restaurantId ? {...restaurant, enrolledYn:yn} : restaurant
                 )
             )
+
+            sortRestaurants();
         }
        
-
         return (
             <div className="YnListWrapper">
                 <div className={["YnList", `YnList_${enrolledYn}`].join(" ")} onClick={onClick}/>
