@@ -41,7 +41,7 @@ const MzList = ({userId}) => {
         getUserData();
     },[userId])
 
-    return (<div className="MzList">
+    return (<div>
         {mzList.map(ls => (
             <EachList state={ls} key={ls.listId} />
         ))}

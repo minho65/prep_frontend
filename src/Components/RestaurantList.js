@@ -18,7 +18,7 @@ function Restaurant({state}) {
 
 function RestaurantList({restaurants}) {
     return (
-        <div className="RestaurantList">
+        <div>
             {restaurants.map(res => (
                 <Restaurant state={res} key={res.listId}/>
             ))}
